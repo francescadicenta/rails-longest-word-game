@@ -1,0 +1,14 @@
+<h1>******** Welcome to the longest word-game !********</h1>
+<p>Here is your grid :"</p>
+<p><%= @grid_view %></p>
+
+<form action="score" method="GET">
+  <label for="try">Make your best:</label>
+  <input type="text" id="try" name="try" placeholder="Try here">
+  <input type="hidden" name="start" value="<%= @start_time %>">
+  <input type="hidden" name="grid" value="<%=  @grid_view %>">
+  <input type="submit" value="submit">
+  <!-- I want here to take the time when the user will click on the button -->
+  <!-- Then I'll use it in the the controller as the end time -->
+</form>
+
